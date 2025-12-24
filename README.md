@@ -230,10 +230,10 @@ for step in range(1, steps + 1):
 
 ## Доказательства
 ## 1. Скриншот до исправления
-![неправильно](screenshotы/img4_incorrect.png)
+![неправильно](screenshots/img4_incorrect.png)
 
 ## 2. Скриншот после исправления
-![правильно](screenshotы/img4_correct.png)
+![правильно](screenshots/img4_correct.png)
 
 # Ошибка 5 — перепутанные аргументы функции
 
