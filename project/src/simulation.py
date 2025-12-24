@@ -51,7 +51,7 @@ def generate_random_title() -> str:
 
 
 def generate_random_year() -> int:
-    year_str = random.randint((0, 2024))
+    year_str = random.randint(0, 2024)
     if year_str[2:4] == "00":
         return (int(year_str) + 10)
     return int(year_str)
@@ -134,7 +134,7 @@ def run_simulation(steps: int = 20, seed: int | None = None) -> None:
     if seed is not None:
         print(f"[СИМУЛЯЦИЯ] Seed: {seed}")
     
-    for step in range(1, steps + 1):
+    for step in range(1, steps):
         event_name, event_func = random.choice(events)
         print(f"[Шаг {step:3d}] Событие: {event_name}")
         try:
