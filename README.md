@@ -189,10 +189,10 @@ return genre
 ## Доказательства
 
 ### 1. Скриншот до исправления
-![неправильно](screenshotы/img3_incorrect.png)
+![неправильно](screenshots/img3_incorrect.png)
 
 ### 2. Скриншот после исправления
-![правильно](screenshotы/img3_correct.png)
+![правильно](screenshots/img3_correct.png)
 
 # Ошибка 4 — ошибка границы цикла (off-by-one)
 
