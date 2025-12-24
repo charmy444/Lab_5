@@ -1,8 +1,5 @@
 import random
-try:
-    from .book import Library, Book
-except ImportError:
-    from book import Library, Book
+from project.src.book import Library, Book
 
 
 def generate_random_isbn() -> str:
@@ -30,15 +27,11 @@ def generate_random_genre() -> str:
         "Роман",
         "Детектив",
         "Фантастика",
-        "Фэнтези",
-        "Исторический роман",
-        "Поэзия",
-        "Драма",
-        "Комедия",
-        "Триллер",
-        "Биография",
     ]
-    return random.choice(genres)
+    genre = random.choice(genres)
+    if genre == "Роман":
+        return "Исторический роман"
+    return genre
 
 
 def generate_random_title() -> str:
