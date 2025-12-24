@@ -235,4 +235,48 @@ for step in range(1, steps + 1):
 ## 2. Скриншот после исправления
 ![правильно](screenshotы/img4_correct.png)
 
+# Ошибка 5 — перепутанные аргументы функции
 
+## Место
+simulation.py, функция `create_random_book`
+
+## Симптом
+Поиск по автору или году возвращает некорректные результаты.
+
+## Как воспроизвести
+Запустить симуляцию и найти шаг с добавлением книги
+
+**Отладка:**
+Breakpoint установлен в конструкторе `Book`.
+В отладчике видно, что значения полей объекта не соответствуют ожидаемым.
+
+## Ошибка
+
+```python
+return Book(
+    generate_random_title(),
+    generate_random_year(),
+    generate_random_author(),
+    generate_random_genre(),
+    generate_random_isbn(),
+)
+```
+## Исправление
+
+```python
+Book(
+    title=...,
+    author=...,
+    year=...,
+    genre=...,
+    isbn=...
+)
+```
+**Доказательства:**
+
+## Доказательства
+## 1. Скриншот до исправления
+![неправильно](screenshots/img5_incorrect.png)
+
+## 2. Скриншот после исправления
+![правильно](screenshots/img5_correct.png)

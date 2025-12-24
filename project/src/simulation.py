@@ -51,18 +51,18 @@ def generate_random_title() -> str:
 
 
 def generate_random_year() -> int:
-    year_str = random.randint(0, 2024)
+    year_str = str(random.randint(0, 2024))
     if year_str[2:4] == "00":
         return (int(year_str) + 10)
     return int(year_str)
 
 def create_random_book() -> Book:
     return Book(
-        title=generate_random_title(),
-        author=generate_random_author(),
-        year=generate_random_year(),
-        genre=generate_random_genre(),
-        isbn=generate_random_isbn(),
+        generate_random_title(),
+        generate_random_year(),
+        generate_random_author(),
+        generate_random_genre(),
+        generate_random_isbn(),
     )
 
 
